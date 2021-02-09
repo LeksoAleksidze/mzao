@@ -61,23 +61,27 @@ body {
         height: 260px;
     }
     #headerSection {
-        background-color: $mainColor;
+        // background-color: $mainColor;
+        background-image: url(../images/mzaooRotate.png);
+        background-position: top;
+        background-repeat: no-repeat;
+        background-size: cover;
         padding: 10px;
         position: relative;
         overflow: hidden;
-        .overlay-image {
-            position: absolute;
-            left: 0;
-            top: 0;
-            height: 100%;
-            width: 100%;
-            opacity: 0.1;
-            img {
-                max-width: 100%;
-                object-fit: cover;
-                width: 100%;
-            }
-        }
+        // .overlay-image {
+        //     position: absolute;
+        //     left: 0;
+        //     top: 0;
+        //     height: 100%;
+        //     width: 100%;
+        //     opacity: 0.1;
+        //     img {
+        //         max-width: 100%;
+        //         object-fit: cover;
+        //         width: 100%;
+        //     }
+        // }
         &.change {
             .line-1 {
                 transform: rotateZ(-45deg) translate(-8px, 6px);
@@ -317,7 +321,11 @@ body {
        
     }
     #footerSection {
-        background-color: $mainColor;
+        background-image: url(../images/mzaooRotate.png);
+        background-position: top;
+        background-repeat: no-repeat;
+        background-size: cover;
+        // background-color: $mainColor;
         padding: 20px 10px;
         position: relative;
         overflow: hidden;
@@ -786,7 +794,11 @@ body {
         left: -300px;
         width: 300px;
         height: 100%;
-        background-color: rgba($color: $mainColor, $alpha: 1);
+        // background-color: rgba($color: $mainColor, $alpha: 1);
+        background-image: url(../images/mzaoo.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -845,9 +857,7 @@ body {
 }
 
 
-@media (max-width: 600px) {
-   
-}
+
 
 @media (max-width: 568px) {
     body #heroSection .products-container .product-wrapper {
@@ -856,8 +866,15 @@ body {
     }
     body #footerSection .row {
         flex-direction: column;
-        .center,
+        .center{
+            order: 3;
+        }
         .logo {
+            order: 1;
+            margin-bottom: 25px;
+        }
+        .social {
+            order: 2;
             margin-bottom: 25px;
         }
     }
