@@ -29,3 +29,14 @@ var swiper = new Swiper('.swiper-container', {
   headerOverlay.addEventListener('click', ()=>{
     headerSection.classList.toggle('change');
   });
+
+const body = document.querySelector('body')
+const cartFormTable = document.querySelector('.cart-info form table');
+
+window.addEventListener('resize', ()=> {
+  if(body.clientWidth <= 700){
+    cartFormTable.classList.add('table-responsive')
+  } else {
+    cartFormTable.classList.remove('table-responsive')
+  }
+})

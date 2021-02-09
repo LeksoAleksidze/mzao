@@ -44,7 +44,19 @@ body {
   body #headerSection {
     background-color: #fbb724;
     padding: 10px;
-    position: relative; }
+    position: relative;
+    overflow: hidden; }
+    body #headerSection .overlay-image {
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      opacity: 0.1; }
+      body #headerSection .overlay-image img {
+        max-width: 100%;
+        object-fit: cover;
+        width: 100%; }
     body #headerSection.change .line-1 {
       transform: rotateZ(-45deg) translate(-8px, 6px); }
     body #headerSection.change .line-2 {
@@ -226,7 +238,20 @@ body {
           color: #77a464; }
   body #footerSection {
     background-color: #fbb724;
-    padding: 20px 10px; }
+    padding: 20px 10px;
+    position: relative;
+    overflow: hidden; }
+    body #footerSection .overlay-footer-image {
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      opacity: 0.1; }
+      body #footerSection .overlay-footer-image img {
+        max-width: 100%;
+        object-fit: cover;
+        width: 100%; }
     body #footerSection .row {
       display: flex;
       justify-content: space-between;
@@ -527,6 +552,10 @@ body {
         body #cartSection .cart-total .checkout-btn button:hover {
           background-color: #121618; }
 
+@media (min-width: 991px) {
+  .overlay-nav-image {
+    display: none !important; } }
+
 @media (max-width: 991px) {
   #headerSection.change .nav-overlay {
     opacity: 1;
@@ -569,6 +598,21 @@ body {
     visibility: hidden;
     opacity: 0;
     transition: all .4s linear; }
+    #headerSection .navigation .overlay-nav-image {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0.1; }
+      #headerSection .navigation .overlay-nav-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        max-width: 100%;
+        display: block; }
     #headerSection .navigation .navigation-ul {
       padding: 0 !important; }
       #headerSection .navigation .navigation-ul li {
@@ -582,6 +626,7 @@ body {
           #headerSection .navigation .navigation-ul li a::before {
             left: 0;
             margin: 0 !important; }
+  body #cartSection .cart-info form .update-cart button,
   body #cartSection .cart-total .checkout-btn button {
     width: 100% !important; }
   body #cartSection .cart-total table {
